@@ -33,9 +33,9 @@ public class UrlController {
 	}
 	
 	@GetMapping("/{code}")
-	public void redirect(@PathVariable String code, HttpServletResponse httpServletResponse) throws IOException{
-		String longUrl = urlService.getLongUrl(code);
-		httpServletResponse.sendRedirect(longUrl);
-	}
+    public void redirect(@PathVariable String code, HttpServletResponse httpServletResponse) throws IOException{
+        String longUrl = urlService.getLongUrl(code);
+        httpServletResponse.sendRedirect(longUrl);
+    }
 	
 }
